@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+  {% for tweet in conversation %}
+    <div id="tweet-{{ tweet.id }}" class="tweet">
+      <a href="https://twitter.com/{{ tweet.user.screen_name }}" class="screen-name">
+        @{{ tweet.user.screen_name }}
+      </a>
+
+      <span class="text">
+        {{ tweet.text|linkify_handles|safe }}
+      </span>
+    </div>
+  {% endfor %}
+{% endblock %}

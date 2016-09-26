@@ -1,0 +1,28 @@
+body {
+    background: #ccc;
+}
+
+#content {
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tweet {
+    background: #eee;
+    padding: 25px;
+    margin: 15px 0;
+    border: 1px solid #666;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px #888;
+}
+
+.tweet .screen-name {
+    color: #43f;
+    font-weight: bold;
+}
+
+.tweet .text {
+    display: block;
+    padding: 10px 0;
+}

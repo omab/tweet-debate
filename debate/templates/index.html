@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form method="post" action="/">
+  <div>
+    <label for="url">Tweet URL or Id:</label>
+    <input type="text" name="url" value="{{ url or "" }}" />
+  </div>
+
+  <button>Submit</button>
+</form>
+{% endblock %}
