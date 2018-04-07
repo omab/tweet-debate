@@ -46,9 +46,9 @@ def index():
         cached_value = cache_get(tweet_id)
         if not cached_value:
             tweet = CLIENT.tweet(tweet_id)
-            tweets = CLIENT.tweets(tweet)
-            cache_set(tweet_id, [msg.AsJsonString() for msg in tweets])
-        return redirect(url_for('conversation', tweet_id))
+            tweets = CLIENT.conversation(tweet)
+            cache_set(tweet_id, [msg for msg in tweets])
+        return redirect(url_for('conversation', tweet_id=tweet_id))
     else:
         return render_template('index.html', url=None)
 
